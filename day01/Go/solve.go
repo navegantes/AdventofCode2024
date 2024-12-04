@@ -12,7 +12,7 @@ import (
 func main() {
 
 	// filename := "teste.txt"
-	filename := "../data/input.txt"
+	filename := "../../data/input.txt"
 
 	data, _ := os.ReadFile(filename)
 	lines := strings.Split(strings.TrimSpace(string(data)), "\n")

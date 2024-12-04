@@ -1,11 +1,16 @@
 import os
 from collections import Counter
 
-current_directory = os.path.dirname(os.path.realpath(__file__))
-parent_directory = os.path.dirname(current_directory)
+
+def get_file(filename):
+    parent_directory = os.path.dirname(os.path.dirname(__file__))
+    base_dir = os.path.dirname(parent_directory)
+
+    return os.path.join(base_dir, "data", filename)
+
 
 filename = "input.txt"
-filepath = os.path.join(parent_directory, "data", filename)
+filepath = get_file(filename)
 
 with open(filepath) as file:
     data = file.readlines()
